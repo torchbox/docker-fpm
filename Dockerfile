@@ -1,3 +1,6 @@
-FROM centos:7
+FROM debian:9
 
-RUN yum -y install rubygems ruby-devel libffi-devel gcc make rpm-build rsync gpg2 rpm-sign
+RUN	apt-get update && \
+	apt-get -qy install ruby2.3 ruby2.3-dev rubygems libffi-dev gcc make curl rsync gnupg && \
+	rm -rf /var/cache/apt/* /var/lib/apt/lists/* && \
+	gem install fpm
