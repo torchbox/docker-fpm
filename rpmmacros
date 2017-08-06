@@ -1,0 +1,4 @@
+%_signature gpg
+%_gpg_digest_algo sha256
+%_gpgbin /usr/bin/gpg
+%_gpg_name sysadmin@torchbox.com
